@@ -10,4 +10,13 @@ public class MainController {
     public String getIndex(){
         return "index";
     }
+    @GetMapping("/login")
+    public String getLogin(){
+        return "login";
+    }
+
+    @GetMapping("/access-denied")
+    public String accessDenied(){
+        return "access-denied";
+    }
 }
