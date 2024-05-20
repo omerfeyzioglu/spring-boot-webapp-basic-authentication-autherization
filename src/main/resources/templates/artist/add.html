@@ -24,7 +24,7 @@
     <form th:action="@{/artist/add}" method="post">
         <div class="mb-3">
             <label for="name" class="form-label">Artist Name</label>
-            <input id="name" th:field="${artist.name}" type="text" class="form-control" required>
+            <input id="name" th:field="${artist.name}" type="text" class="form-control" required autocomplete="off">
         </div>
         <div class="mb-3">
             <label for="birthdate" class="form-label">Select birthdate</label>
@@ -32,7 +32,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="country">Country</label>
-            <input th:field="${artist.country}" type="text" class="form-control" id="country" required>
+            <input th:field="${artist.country}" type="text" class="form-control" id="country" required autocomplete="off">
         </div>
 
         <button  type="submit" class="btn btn-primary">Submit</button>

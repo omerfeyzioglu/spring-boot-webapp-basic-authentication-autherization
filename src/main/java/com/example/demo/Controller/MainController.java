@@ -16,6 +16,12 @@ public class MainController {
         return "login";
     }
 
+    @PostMapping("/logout")
+    public String getLogout(){
+        return "login";
+    }
+
+
     @GetMapping("/access-denied")
     public String accessDenied(){
         return "access-denied";
