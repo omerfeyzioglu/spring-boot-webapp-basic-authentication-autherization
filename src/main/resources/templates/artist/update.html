@@ -21,7 +21,7 @@
     </div>
 </nav>
 <div>
-    <form th:action="@{/artist/update/{id}(id=${artist.id})}" th:object="${artist}" method="post">
+    <form th:action="@{/artist/update/{id}(id=${artist.id})}" th:object="${artist}" method="post" >
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Artist Name</label>
             <input th:field="*{name}"   type="text" class="form-control" id="exampleInputEmail1" required>
@@ -39,6 +39,7 @@
             <button type="submit" class="btn btn-warning">Edit</button>
             <a th:href="@{'/artist/delete/' + ${artist.id}}" class="btn btn-danger">Delete</a>
         </div>
+
     </form>
 
 

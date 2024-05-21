@@ -65,6 +65,14 @@ span {
     );
 }
 
+ .getSmallImage {
+     width: 75px;
+     height: 75px;
+     object-fit: cover;
+
+ }
+
+
 .left {
     left: 0;
     bottom: 0;

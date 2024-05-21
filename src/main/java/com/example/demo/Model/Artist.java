@@ -5,9 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @AllArgsConstructor
@@ -26,6 +24,11 @@ public class Artist {
 
     @Column(name="birthdate")
     private LocalDate birth_date;
+
+    @Column(name="imgURL")
+    private String imgURL;
+
+
 
     @Column(name="country",length = 100)
     private String country;

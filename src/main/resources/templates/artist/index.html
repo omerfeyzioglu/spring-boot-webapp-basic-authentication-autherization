@@ -23,6 +23,7 @@
 <table class="table">
     <thead>
     <tr>
+        <th scope="col">Image</th>
         <th scope="col">#</th>
         <th  scope="col">Name</th>
         <th scope="col">Birthdate (yyyy-mm-dd)</th>
@@ -32,10 +33,13 @@
     </thead>
     <tbody>
     <tr th:each="a:${artist}">
+        <td><img class="getSmallImage" th:src="@{'/images/' + ${a.imgURL}}" style="width: 75px; height: 75px; object-fit: cover;"/></td>
+
+
         <th th:text="${a.id}"scope="row">1</th>
         <td th:text="${a.name}"></td>
         <td th:text="${a.birth_date}"></td>
-        <td th:text="${a.country}">/td>
+        <td th:text="${a.country}"></td>
         <td>
         <a th:href="@{/artist/update/{id}(id=${a.id})}">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-pencil-fill" viewBox="0 0 16 16">

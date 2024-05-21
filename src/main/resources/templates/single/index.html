@@ -24,6 +24,7 @@
     <thead>
     <tr>
         <th scope="col">Song Name</th>
+        <th scope="col">Image</th>
         <th scope="col">Artist Name</th>
         <th scope="col">Genre</th>
         <th scope="col">Release Date</th>
@@ -33,7 +34,10 @@
     <tbody>
     <tr th:each="sV:${sVw}">
 
+
         <td th:text="${sV.song.title}">Song Title</td>
+
+        <td><img class="getSmallImage" th:src="@{'/images/' + ${sV.artist.imgURL}}" style="width: 75px; height: 75px; object-fit: cover;"/></td>
 
         <td>
             <span th:text="${sV.artist.name}">Artist</span>

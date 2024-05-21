@@ -21,7 +21,7 @@
     </div>
 </nav>
 <div>
-    <form th:action="@{/artist/add}" method="post">
+    <form th:action="@{/artist/add}" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="name" class="form-label">Artist Name</label>
             <input id="name" th:field="${artist.name}" type="text" class="form-control" required autocomplete="off">
@@ -33,6 +33,12 @@
         <div class="mb-3">
             <label class="form-label" for="country">Country</label>
             <input th:field="${artist.country}" type="text" class="form-control" id="country" required autocomplete="off">
+        </div>
+        <div class="input-group mb-3">
+            <div th:if="${artist.imgURL != null && !artist.imgURL.isEmpty()}">
+                <img th:src="@{/images/{imgURL}(imgURL=${artist.imgURL})}" class="rounded-3" />
+            </div>
+            <input type="file" name="image" accept="image/png, image/jpeg">
         </div>
 
         <button  type="submit" class="btn btn-primary">Submit</button>

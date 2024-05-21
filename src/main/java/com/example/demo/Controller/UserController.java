@@ -27,4 +27,13 @@ public class UserController {
         return "redirect:/login";
 
     }
+
+    @GetMapping("/index")
+    private String getArtists(Model model){
+        Iterable<User> users = urP.findAll();
+        model.addAttribute("user", users);
+        return "index" ;
+    }
+
+
 }
